@@ -9,15 +9,17 @@ import path from "path";
 
 config();
 
+const base = "/FrontendMentor-advice-generator-app-HJVS9V3N5/";
+
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "/FrontendMentor-advice-generator-app-HJVS9V3N5/",
+	base,
 	plugins: [
 		react(),
 		VitePWA({
 			srcDir: "app",
 			registerType: "autoUpdate",
-			scope: "/",
+			scope: base,
 			manifest: <unknown>manifest
 		}),
 		htmlPlugin({
