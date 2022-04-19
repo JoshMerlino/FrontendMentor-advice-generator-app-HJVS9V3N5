@@ -4,7 +4,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import "styles/index.css";
 import { registerSW } from "virtual:pwa-register";
-import App from "./src/pages/Home";
+import { base } from "./manifest.json";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./src/runtime/ErrorBoundry";
 
 if ("serviceWorker" in navigator && !/localhost/.test(window.location.toString())) registerSW({
@@ -20,7 +21,16 @@ ReactDOM.render(
 	<StrictMode>
 		<ErrorBoundary>
 			<QueryClientProvider client={ queryClient }>
-				<App/>
+				<BrowserRouter>
+					<Routes>
+						{ Object.values(pages).map((page, key) => <Route
+							key={ key }
+							path={ base + page.path.substring(1) }
+							caseSensitive={ page.caseSensitive || false }
+							element={ <page.default/> }/>
+						) }
+					</Routes>
+				</BrowserRouter>
 				{ !PRODUCTION && <ReactQueryDevtools/> }
 			</QueryClientProvider>
 		</ErrorBoundary>
