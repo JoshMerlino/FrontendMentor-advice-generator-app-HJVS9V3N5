@@ -11,6 +11,7 @@ config();
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	base: "/FrontendMentor-advice-generator-app-HJVS9V3N5/",
 	plugins: [
 		react(),
 		VitePWA({
