@@ -2,10 +2,10 @@ import { ElementType, StrictMode } from "react";
 import ReactDOM from "react-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { registerSW } from "virtual:pwa-register";
-import ErrorBoundary from "./src/runtime/ErrorBoundry";
 import "styles/index.css";
+import { registerSW } from "virtual:pwa-register";
+import App from "./src/pages/Home";
+import ErrorBoundary from "./src/runtime/ErrorBoundry";
 
 if ("serviceWorker" in navigator && !/localhost/.test(window.location.toString())) registerSW({
 	immediate: true
@@ -20,16 +20,7 @@ ReactDOM.render(
 	<StrictMode>
 		<ErrorBoundary>
 			<QueryClientProvider client={ queryClient }>
-				<BrowserRouter>
-					<Routes>
-						{ Object.values(pages).map((page, key) => <Route
-							key={ key }
-							path={ page.path }
-							caseSensitive={ page.caseSensitive || false }
-							element={ <page.default/> }/>
-						) }
-					</Routes>
-				</BrowserRouter>
+				<App/>
 				{ !PRODUCTION && <ReactQueryDevtools/> }
 			</QueryClientProvider>
 		</ErrorBoundary>
