@@ -9,11 +9,8 @@ import pjson from "./package.json";
 
 config();
 
-const base = "/FrontendMentor-advice-generator-app-HJVS9V3N5/";
-
 // https://vitejs.dev/config/
 export default defineConfig({
-	base,
 	plugins: [
 		react(),
 		VitePWA({
