@@ -29,7 +29,7 @@ export default function Advice(): JSX.Element {
 
 	// Return card
 	return (
-		<div className="bg-darkgrayishblue shadow-3xl rounded-3xl p-12 text-center mx-auto pb-0" style={ { maxWidth: "clamp(0px, 532px, 100%)"} }>
+		<div className="bg-darkgrayishblue shadow-2xl rounded-3xl p-12 text-center mx-auto pb-0" style={ { maxWidth: "clamp(0px, 532px, 100%)"} }>
 			<p className="text-neongreen uppercase text-xs tracking-[4px]">Advice #{ state.id.toString().padStart(3, "0") }</p>
 			<p className="mt-8 text-3xl text-lightcyan">&ldquo;{ state.advice }&rdquo;</p>
 			<div className="border-t-[1px] border-lightcyan/10 mt-12 mb-8">
