@@ -33,7 +33,7 @@ export default function Advice({ id = -1 }: Props): JSX.Element {
 	// Return card
 	return (
 		<div className="p-6">
-			<div className="bg-darkgrayishblue shadow-2xl rounded-2xl p-12 text-center mx-auto pb-0" style={ { maxWidth: "clamp(0px, 532px, 100%)"} }>
+			<div className="bg-darkgrayishblue desktop:shadow-2xl rounded-2xl p-12 text-center mx-auto pb-0" style={ { maxWidth: "clamp(0px, 532px, 100%)"} }>
 				<p className="text-neongreen uppercase text-xs tracking-[4px]">Advice #{ state.id.toString().padStart(3, "0") }</p>
 				<p className="mt-8 text-3xl text-lightcyan">&ldquo;{ state.advice }&rdquo;</p>
 				<div className="my-8 divider h-4 bg-center"/>
