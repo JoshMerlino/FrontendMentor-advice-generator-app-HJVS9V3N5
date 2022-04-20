@@ -8,8 +8,12 @@ body {
 	font-family: Manrope, sans-serif;
 }
 
-button:hover {
-	box-shadow: 0 0 24px 0px #52ffa8;
+.spinning {
+	animation: spinning 500ms ease-in-out;
+}
+
+.divider {
+	background-image: url("/pattern-divider-desktop.svg");
 }
 
 @keyframes spinning {
@@ -19,8 +23,4 @@ button:hover {
 	100% {
 		transform: rotate(360deg);
 	}
-}
-
-.spinning {
-	animation: spinning 500ms ease-in-out;
 }

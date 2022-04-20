@@ -1,31 +1,19 @@
 {
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-    "name": "My App",
-    "short_name": "My App",
-    "description": "My App description",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "name": "Advice Generator App",
+    "short_name": "Advice Generator App",
+    "description": "Advice Generator App - FrontendMentor Challange - Submitted by: JoshMerlino",
+    "background_color": "#1f2632",
+    "theme_color": "#1f2632",
     "orientation": "portrait",
     "base": "/FrontendMentor-advice-generator-app-HJVS9V3N5/",
-    "id": "0x16a190429da311ec8cf000155d1b1170",
+    "id": "FrontendMentor-advice-generator-app-HJVS9V3N5",
     "icons": [
         {
-            "src": "/favicon.svg",
-            "sizes": "1024x1024",
-            "type": "image/svg",
-            "purpose": "any"
-        },
-        {
-            "src": "/splash_icon.png",
-            "sizes": "1024x1024",
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
             "type": "image/png",
             "purpose": "any"
-        },
-        {
-            "src": "/maskable_icon.svg",
-            "sizes": "1024x1024",
-            "type": "image/svg",
-            "purpose": "maskable"
         }
     ]
 }

@@ -26,10 +26,6 @@ export default defineConfig({
     		}, {
 				name: "theme-color",
 				content: manifest.theme_color
-			} ],
-			links: [ {
-				rel: "apple-touch-icon",
-				href: "/apple_touch_icon.png"
 			} ]
 		})
 	],

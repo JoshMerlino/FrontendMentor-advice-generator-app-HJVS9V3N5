@@ -12,6 +12,9 @@ module.exports = {
 				darkgrayishblue: "hsl(217, 19%, 24%)",
 				darkblue: "hsl(218, 23%, 16%)"
 
+			},
+			boxShadow: {
+				glow: "0 0 20px #0000"
 			}
 		}
 	},
