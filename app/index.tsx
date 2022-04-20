@@ -30,6 +30,10 @@ ReactDOM.render(
 							element={ <page.default/> }/>
 						) }
 					</Routes>
+					<div className="attribution fixed bottom-0 w-full text-center py-4 text-lightcyan">
+						Challenge by <a className="text-neongreen" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+						Coded by <a className="text-neongreen" href="https://joshmerlino.github.io/">JoshMerlino</a>.
+					</div>
 				</BrowserRouter>
 				{ !PRODUCTION && <ReactQueryDevtools/> }
 			</QueryClientProvider>
