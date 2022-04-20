@@ -38,7 +38,7 @@ export default function Advice({ id = -1 }: Props): JSX.Element {
 				<p className="mt-8 text-3xl text-lightcyan">&ldquo;{ state.advice }&rdquo;</p>
 				<div className="my-8 divider h-4 bg-center"/>
 				<button disabled={ disabled } className="bg-neongreen hover:shadow-glow hover:shadow-neongreen/50 disabled:bg-gray-600 disabled:pointer-events-none disabled:shadow-none disabled:text-white disabled rounded-full p-5 -mt-8 transition-all" style={ { transform: "translateY(32px)" } } onClick={ () => fetchState(true) }>
-					<img src="/icon-dice.svg" alt="" className={ classnames(spinning && "spinning") }/>
+					<img src={ base + "icon-dice.svg" } alt="" className={ classnames(spinning && "spinning") }/>
 				</button>
 			</div>
 		</div>
