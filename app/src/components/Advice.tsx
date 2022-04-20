@@ -15,7 +15,7 @@ export default function Advice({ id = -1 }: Props): JSX.Element {
 	// Fetch new state from API
 	function fetchState(hard = false) {
 		setSpinning(true);
-		setDisabled(true);
+		if (hard) setDisabled(true);
 		setTimeout(() => setSpinning(false), 500);
 		fetch(`https://api.adviceslip.com/advice${id > -1 && hard === false ? `/${id}` : ""}`)
 			.then(resp => resp.json())
